@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <title>Müzik & Fotoğraf</title>
+  <style>
+    body {
+      background-color: #fff0f5;
+      font-family: 'Poppins', sans-serif;
+      text-align: center;
+      padding: 50px;
+      color: #660033;
+    }
+
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 40px;
+      max-width: 700px;
+      margin: 0 auto;
+      background-color: #fff;
+      padding: 30px;
+      border-radius: 20px;
+      box-shadow: 0 0 25px rgba(255, 105, 180, 0.3);
+    }
+
+    .photo-box, .music-box {
+      flex: 1 1 300px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .photo-box img {
+      width: 100%;
+      max-width: 280px;
+      height: auto;
+      border-radius: 20px;
+      box-shadow: 0 0 15px rgba(255, 105, 180, 0.5);
+    }
+
+    audio {
+      width: 100%;
+      max-width: 280px;
+      outline: none;
+      margin-top: 10px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(255, 105, 180, 0.3);
+    }
+
+    .caption {
+      margin-top: 15px;
+      font-size: 1.2em;
+      font-weight: 600;
+      color: #cc0066;
+    }
+
+    a {
+      display: inline-block;
+      margin-top: 40px;
+      padding: 12px 25px;
+      background-color: #ff69b4;
+      color: white;
+      text-decoration: none;
+      border-radius: 12px;
+      font-weight: 600;
+      transition: 0.3s;
+    }
+
+    a:hover {
+      background-color: #ff1493;
+    }
+
+    /* Responsive için küçülen ekranlarda alt alta dizilir */
+    @media (max-width: 650px) {
+      .container {
+        flex-direction: column;
+        padding: 20px;
+      }
+      .photo-box, .music-box {
+        max-width: 100%;
+      }
+      audio, .photo-box img {
+        max-width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <h1>🎵 Müziğimiz</h1>
+
+  <div class="container">
+    <div class="photo-box">
+      <img src="galeri/WhatsApp Görsel 2025-07-24 saat 00.52.56_59737e09.jpg" alt="Sevgilim" />
+    </div>
+
+    <div class="music-box">
+      <audio controls>
+        <source src="müzik/Gülden Karaböcek - Gözüm Seni Görmesede (Official Audio).mp3" type="audio/mpeg">
+        Tarayıcınız audio elementini desteklemiyor.
+      </audio>
+      <div class="caption">
+        Bu şarkı benden sana sevgilim ne zaman seni sevmediğimi düşünürsen bunu dinle seni çok ama çok seviyorum gözüm seni görmesede yine seveceğim...
+      </div>
+    </div>
+  </div>
+
+  <a href="home.html">🔙 Ana Sayfa</a>
+
+</body>
+</html>

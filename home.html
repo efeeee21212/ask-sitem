@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <title>Bizim Hikayemiz</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap&family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+</head>
+<body class="home-body">
+  <div class="content-box">
+    <h1>🌹 Bizim Hikayemiz 🌹</h1>
+
+    <!-- Gün Sayacı -->
+    <div id="daysTogether" style="font-size: 1.2em; color: #cc0066; margin-top: 20px;"></div>
+
+    <!-- Aşk Mesajı -->
+    <p class="romantic-text">
+      Seni ilk gördüğüm andan beri kalbimde tarifsiz bir aşk var canım sevgilim…<br /><br />
+      Hayatımın anlamı oldun. İyi ki yollarımız kesişti, iyi ki bu hayat bizi bir araya getirdi.  
+      Seninle tanıştığım o gün, aslında gerçek sevginin ne olduğunu fark ettiğim gündü.<br /><br />
+
+      Birlikte sayısız güzel anı biriktirdik. Gülüşlerin, bakışların, bana sarıldığın o anlar...  
+      Ama biliyorum ki daha yaşayacağımız çok şey var. Önümüzde uzun ve güzel bir hayat var.<br /><br />
+
+      Zaman zaman kırabiliriz birbirimizi… İstemeden, farkında olmadan. Ne kadar kırdıysam seni özür dilerim.  
+      Ama bizim aşkımızın gücü, birbirimize olan tutkumuz ve sevgimiz her şeyi onaracak kadar büyük.<br /><br />
+
+      Bizi bir arada tutan şey; kalpten gelen o bağ, tutkuyla birbirimize sarıldığımız anlar.  
+      Ve bu yüzden seni her koşulda, her zaman, her halinle seveceğim.<br /><br />
+
+      Aşkım, sevgilim… Ne olursa olsun, ben hep senin yanında olacağım.<br />
+      Hep seveceğim. Hep kalbimde taşıyacağım.<br /><br />
+
+      Dünyaya bin kez daha gelsem, bin kez daha seni arar, bulur ve severdim…  
+      Çünkü sen, benim her şeyim oldun Dünyanın En Güzel Kızı. 💖
+    </p>
+
+    <!-- Butonlar -->
+    <div class="button-box">
+      <a href="galeri.html" class="love-button">📸 Galeriye Git</a>
+      <a href="map.html" class="love-button">📍 Seni İlk Gördüğüm Yer</a>
+      <a href="müzik.html" class="love-button">🎵 Bizim Şarkımız</a>
+      <a href="box.html" class="love-button">Hediye Kutuna Git</a>
+    </div>
+  </div>
+
+  <script>
+    const startDate = new Date(2024, 8, 19); // Başlangıç tarihi
+
+    function calculateDaysTogether() {
+      const today = new Date();
+      const diffTime = today - startDate;
+      const diffDays = Math.floor(diffTime / (1000 * 60 * 60 * 24));
+      return diffDays;
+    }
+
+    function showDaysTogether() {
+      const days = calculateDaysTogether();
+      const container = document.getElementById('daysTogether');
+      if (days === 0) {
+        container.textContent = "Bugün beraber olduğumuz ilk gün!";
+      } else if (days === 1) {
+        container.textContent = "Beraber 1 günüz!";
+      } else {
+        container.textContent = `Beraber ${days} .günümüz!`;
+      }
+    }
+
+    document.addEventListener("DOMContentLoaded", showDaysTogether);
+  </script>
+
+  <script src="script.js"></script>
+</body>
+</html>

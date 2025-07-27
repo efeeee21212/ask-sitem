@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <title>Sevgiyle Giriş</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+</head>
+<body class="romantic-login">
+  <div class="overlay">
+    <div class="login-box">
+      <h2>❤️ Hoş Geldin Aşkım ❤️</h2>
+      <p>İlk çıkma tarihimiz? (GG/AA/YYYY)</p>
+      <input type="password" id="password" placeholder="Örn: 14/02/2023">
+      <button onclick="checkPassword()">💗 Giriş Yap 💗</button>
+      <p id="error" class="error-text"></p>
+    </div>
+  </div>
+
+  <script>
+    function checkPassword() {
+      const correctPassword = "19/09/2024"; // Şifre burada
+      const entered = document.getElementById("password").value;
+      if (entered === correctPassword) {
+        window.location.href = "home.html";
+      } else {
+        document.getElementById("error").innerText = "Nasıl bilemezsin 😢";
+      }
+    }
+  </script>
+	<script src="script.js"></script>
+
+</body>
+</html>
+
